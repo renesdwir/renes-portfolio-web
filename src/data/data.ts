@@ -23,23 +23,23 @@ export const navigation_data: NavigationDataInterface = {
   contacts: [
     {
       name: "Instagram",
-      icon: "tesICONS",
+      icon: "FaInstagram",
       url: "https://www.instagram.com/renessdwir/",
     },
     {
       name: "Github",
-      icon: "github",
+      icon: "FaGithub",
       url: "https://github.com/renesdwir",
     },
     {
       name: "Linkedin",
-      icon: "linkedin",
+      icon: "FaLinkedin",
       url: "https://www.linkedin.com/in/renesdwir/",
     },
   ],
 };
 
-export const about_data: AboutDataInterface = [
+export const about_data: string[] = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat elementum congue. Nunc commodo congue tortor ac euismod. Mauris vulputate justo eros, ut pulvinar urna pharetra sed. Mauris auctor scelerisque imperdiet. Nunc tincidunt felis at consectetur vehicula. Aliquam et massa id est feugiat venenatis. Aliquam erat volutpat. Mauris tempor efficitur elit, at.",
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mollis sapien. Pellentesque tincidunt viverra dignissim. Fusce semper maximus finibus. Donec sed ornare sem. Aliquam dignissim vestibulum tellus sit amet rutrum. Morbi interdum magna et tellus lacinia, ut feugiat ligula laoreet. Etiam ac.",
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit ipsum nec urna interdum bibendum ut vitae diam. Curabitur et nulla eget massa tempor interdum. Fusce.",
@@ -69,19 +69,19 @@ export const experience_data: ExperienceDataInterface[] = [
 export const tech_data: TechDataInterface[] = [
   {
     name: "javascript",
-    icon: "javascript",
+    icon: "javascript.svg",
     url: "https://www.javascript.com/",
   },
   {
     name: "reactjs",
-    icon: "react",
+    icon: "react.svg",
     url: "https://reactjs.org/",
   },
 ];
 
 export const education_data: EducationDataInterface[] = [
   {
-    logo: "LOGO",
+    logo: "hacktivsvg.svg",
     name: "Hacktiv8 Indonesia",
     date: "Jan `22 - Apr `22",
     achievement: "Graduated with a score of 95.5 /100",
@@ -91,15 +91,40 @@ export const education_data: EducationDataInterface[] = [
 
 export const project_data: ProjectDataInterface[] = [
   {
-    img: "tesImage",
+    img: "projects.png",
     title: "Portfolio Website",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ab eligendi iure esse doloremque cupiditate!",
-    tech: ["javascript", "reactjs", "nextjs"],
+    tech: [
+      "javascript",
+      "reactjs",
+      "nextjs",
+      "nextjs",
+      "nextjs",
+      "nextjs",
+      "nextjs",
+      "nextjs",
+    ],
+    url: "https://github.com/renesdwir",
+  },
+  {
+    img: "projects.png",
+    title: "Portfolio Website",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ab eligendi iure esse doloremque cupiditate!",
+    tech: [
+      "javascript",
+      "reactjs",
+      "nextjs",
+      "nextjs",
+      "nextjs",
+      "nextjs",
+      "nextjs",
+      "nextjs",
+    ],
     url: "https://github.com/renesdwir",
   },
 ];
 
-export const footer_data: FooterDataInterface = [
+export const footer_data: string[] = [
   "Thank you very much for visiting my very simple portfolio website.",
   "I hope we can work together in the future",
 ];
