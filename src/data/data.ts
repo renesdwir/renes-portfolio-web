@@ -1,10 +1,8 @@
 import {
   NavigationDataInterface,
   ProfileDataInterface,
-  AboutDataInterface,
   EducationDataInterface,
   ExperienceDataInterface,
-  FooterDataInterface,
   ProjectDataInterface,
   TechDataInterface,
 } from "./data-types";
