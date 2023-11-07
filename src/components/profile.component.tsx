@@ -1,11 +1,11 @@
 import React from "react";
 import Icon from "./icon.component";
 import { Link } from "react-scroll";
-import {
-  NavigationDataInterface,
-  ProfileDataInterface,
-} from "@/data/data-types";
+import { NavigationDataInterface, ProfileDataInterface } from "@/data/data-types";
 import Nav from "./navigation.component";
+import Linkedin from "./icons/Linkedin";
+import Github from "./icons/Github";
+import Instagram from "./icons/Instagram";
 interface ProfilePropsTypes {
   data: ProfileDataInterface;
   navigation: NavigationDataInterface;
@@ -42,6 +42,9 @@ const Profile = (props: ProfilePropsTypes) => {
             href={contact.url}
           />
         ))}
+        <Linkedin className="h-9 w-9 bg-transparent fill-slate-200  hover:fill-cstmgreen cursor-pointer" />
+        <Github className="h-9 w-9 bg-transparent fill-slate-200  hover:fill-cstmgreen  cursor-pointer" />
+        <Instagram className="h-9 w-9  bg-transparent fill-slate-200  hover:fill-cstmgreen  cursor-pointer" />
       </div>
     </div>
   );
