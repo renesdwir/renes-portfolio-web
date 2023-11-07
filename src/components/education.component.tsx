@@ -12,7 +12,7 @@ const Education = (props: EducationPropsTypes) => {
       <Title text="Education" />
       <div className="flex flex-col gap-5">
         {datas.map(({ achievement, date, desc, logo, name }, idx) => (
-          <div>
+          <div key={idx}>
             <Image
               src={`/icons/${logo}`}
               alt={name}
