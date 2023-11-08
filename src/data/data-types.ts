@@ -3,17 +3,17 @@ export interface ProfileDataInterface {
   position: string;
   profileDescription: string[];
 }
+export interface Contact {
+  name: string;
+  icon: (className: string) => JSX.Element;
+  url: string;
+}
+
 export interface NavigationDataInterface {
   nav: string[];
-  contacts: {
-    name: string;
-    icon: string;
-    url: string;
-  }[];
+  contacts: Contact[];
 }
-export interface AboutDataInterface {
-  [index: number]: string;
-}
+
 export interface ExperienceDataInterface {
   position: string;
   at: string;
