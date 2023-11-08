@@ -1,3 +1,4 @@
+import { Email, Github, Instagram, Linkedin } from "@/components/icons/Icons";
 import {
   NavigationDataInterface,
   ProfileDataInterface,
@@ -9,38 +10,64 @@ import {
 
 export const profile_data: ProfileDataInterface = {
   name: "Renes Dwi Riwanto",
-  position: "Junior Software Engineer",
+  position: "Full Stack Developer",
   profileDescription: [
     "Adaptable programmers, ",
     "Quick learners, and Highly Consistent.",
   ],
 };
+export const name: string[] = [
+  "R",
+  "e",
+  "n",
+  "e",
+  "s",
+  " ",
+  "D",
+  "w",
+  "i",
+  " ",
+  "R",
+  "i",
+  "w",
+  "a",
+  "n",
+  "t",
+  "o",
+];
 
 export const navigation_data: NavigationDataInterface = {
   nav: ["about", "experience", "skills", "education", "projects"],
   contacts: [
     {
+      name: "Gmail",
+      icon: (className) => <Email className={className} />,
+      url: "mailto:renesriwanto@gmail.com",
+    },
+    {
       name: "Instagram",
-      icon: "FaInstagram",
+      icon: (className) => <Instagram className={className} />,
       url: "https://www.instagram.com/renessdwir/",
     },
     {
       name: "Github",
-      icon: "FaGithub",
+      icon: (className) => <Github className={className} />,
       url: "https://github.com/renesdwir",
     },
     {
       name: "Linkedin",
-      icon: "FaLinkedin",
+      icon: (className) => <Linkedin className={className} />,
       url: "https://www.linkedin.com/in/renesdwir/",
     },
   ],
 };
 
 export const about_data: string[] = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat elementum congue. Nunc commodo congue tortor ac euismod. Mauris vulputate justo eros, ut pulvinar urna pharetra sed. Mauris auctor scelerisque imperdiet. Nunc tincidunt felis at consectetur vehicula. Aliquam et massa id est feugiat venenatis. Aliquam erat volutpat. Mauris tempor efficitur elit, at.",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mollis sapien. Pellentesque tincidunt viverra dignissim. Fusce semper maximus finibus. Donec sed ornare sem. Aliquam dignissim vestibulum tellus sit amet rutrum. Morbi interdum magna et tellus lacinia, ut feugiat ligula laoreet. Etiam ac.",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam suscipit ipsum nec urna interdum bibendum ut vitae diam. Curabitur et nulla eget massa tempor interdum. Fusce.",
+  `An experienced programmer proficient in JavaScript, specializing in developing websites and mobile
+  applications. I have a strong skill set in server-side development using Node.js and Express.js, as well as clientside development utilizing React.js. Additionally, I am well-versed in leveraging Restful APIs.
+  `,
+  `I possess adaptability, a quick learning ability, and I have a deep interest in learning new technologies and a
+  passion for creating websites that are responsive, interactive, and functionally robust.`,
 ];
 
 export const experience_data: ExperienceDataInterface[] = [
