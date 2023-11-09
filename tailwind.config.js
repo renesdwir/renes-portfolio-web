@@ -14,6 +14,9 @@ module.exports = {
         cstmgreen: "#0AFF9D",
         cstmblack: "#111111",
       },
+      boxShadow: {
+        cstm: "0px 0px 200px 150px rgba(255,255,255,0.1);",
+      },
     },
   },
   plugins: [],
