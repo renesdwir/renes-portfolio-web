@@ -1,4 +1,4 @@
-export default function (props: React.SVGAttributes<SVGSVGElement>) {
+export default function Instagram(props: React.SVGAttributes<SVGSVGElement>) {
   return (
     <svg
       {...props}
