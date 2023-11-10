@@ -1,25 +1,19 @@
 import React from "react";
-import Icon from "./icon.component";
-import { Link } from "react-scroll";
-import { NavigationDataInterface, ProfileDataInterface } from "@/data/data-types";
 import Nav from "./navigation.component";
-import Linkedin from "./icons/Linkedin";
-import Github from "./icons/Github";
-import Instagram from "./icons/Instagram";
-interface ProfilePropsTypes {
-  data: ProfileDataInterface;
-  navigation: NavigationDataInterface;
-}
+import Link from "next/link";
 
-const Profile = (props: ProfilePropsTypes) => {
-  const { name, position, profileDescription } = props.data;
-  const { contacts, nav } = props.navigation;
+import { profile_data, navigation_data, name } from "@/data/data";
+const Profile = () => {
+  const { position, profileDescription } = profile_data;
+  const { contacts, nav } = navigation_data;
   return (
     <div className="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:py-24">
-      <h1 className="inline-block font-extrabold text-4xl md:text-4xl lg:text-5xl tracking-tighter">
+      <h1 className="inline-block font-extrabold text-4xl md:text-4xl lg:text-5xl tracking-tighter selection:bg-cstmgreen selection:text-cstmblack">
         <span>
-          {name}
-          <span className="text-cstmgreen ml-1">.</span>
+          {name.map((item) => (
+            <span className="hover:text-cstmgreen">{item}</span>
+          ))}
+          <span className="text-cstmgreen">.</span>
         </span>
       </h1>
       <p className="my-3 font-semibold text-lg text-cstmgreen">{position}</p>
@@ -35,16 +29,12 @@ const Profile = (props: ProfilePropsTypes) => {
       </div>
       <div className="flex flex-row gap-5 mt-8">
         {contacts.map((contact, idx) => (
-          <Icon
-            key={idx}
-            className="flex items-center hover:text-cstmgreen text-4xl cursor-pointer"
-            iconName={contact.icon}
-            href={contact.url}
-          />
+          <Link href={contact.url} rel="noopener noreferrer" target="_blank">
+            {contact.icon(
+              "h-9 w-9 bg-transparent fill-slate-200  hover:fill-cstmgreen cursor-pointer"
+            )}
+          </Link>
         ))}
-        <Linkedin className="h-9 w-9 bg-transparent fill-slate-200  hover:fill-cstmgreen cursor-pointer" />
-        <Github className="h-9 w-9 bg-transparent fill-slate-200  hover:fill-cstmgreen  cursor-pointer" />
-        <Instagram className="h-9 w-9  bg-transparent fill-slate-200  hover:fill-cstmgreen  cursor-pointer" />
       </div>
     </div>
   );
