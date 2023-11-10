@@ -1,10 +1,8 @@
-import { AboutDataInterface } from "@/data/data-types";
 import Title from "./title.component";
-interface AboutPropsTypes {
-  data: string[];
-}
-const About = (props: AboutPropsTypes) => {
-  const { data: datas } = props;
+import { about_data } from "@/data/data";
+
+const About = () => {
+  const datas = about_data;
   return (
     <div id="about" className="pt-16  lg:pt-0 lg:mb-36">
       <Title text="About" />
