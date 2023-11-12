@@ -19,7 +19,7 @@ export interface ExperienceDataInterface {
   at: string;
   date: string;
   link: string;
-  description: string;
+  description: string[];
   tech: string[];
 }
 export interface TechDataInterface {
