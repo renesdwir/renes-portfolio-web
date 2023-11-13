@@ -25,7 +25,7 @@ function CursorEffect() {
     coords.x !== 0 &&
     coords.y !== 0 && (
       <div
-        className="-z-20 shadow-cstm "
+        className="-z-20 shadow-cstm hidden lg:block "
         style={{
           position: "fixed",
           left: coords.x,
