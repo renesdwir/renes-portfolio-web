@@ -24,15 +24,20 @@ export interface ExperienceDataInterface {
 }
 export interface TechDataInterface {
   name: string;
-  icon: string;
-  url: string;
+  icon: (className?: string) => JSX.Element;
+}
+export interface TechData {
+  frontend: TechDataInterface[];
+  backend: TechDataInterface[];
+  extra: TechDataInterface[];
 }
 export interface EducationDataInterface {
-  logo: string;
   name: string;
+  subTitle: string;
   date: string;
-  achievement: string;
   desc: string;
+  imgUrl: string;
+  url: string;
 }
 export interface ProjectDataInterface {
   img: string;
