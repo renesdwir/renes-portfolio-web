@@ -1,4 +1,29 @@
-import { Email, Github, Instagram, Linkedin } from "@/components/icons/Icons";
+import {
+  Bootstrap,
+  Docker,
+  Ejs,
+  Email,
+  Express,
+  Github,
+  Graphql,
+  Instagram,
+  Javascript,
+  Jwt,
+  Linkedin,
+  Mongodb,
+  Nestjs,
+  Nextjs,
+  Nodejs,
+  Postgresql,
+  Prisma,
+  ReactNative,
+  Reactjs,
+  Redis,
+  Redux,
+  Tailwind,
+  Typescript,
+  Vue,
+} from "@/components/icons/Icons";
 import {
   NavigationDataInterface,
   ProfileDataInterface,
@@ -6,7 +31,9 @@ import {
   ExperienceDataInterface,
   ProjectDataInterface,
   TechDataInterface,
+  TechData,
 } from "./data-types";
+import MoongoseIcon from "@/components/icons/Mongoose";
 
 export const profile_data: ProfileDataInterface = {
   name: "Renes Dwi Riwanto",
@@ -76,41 +103,63 @@ export const experience_data: ExperienceDataInterface[] = [
     at: "Jakarta Eye Center",
     date: "Jun `22 - Jun `23",
     link: "https://jec.co.id/id",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptas at sed atque nostrum lorem20 quidem.",
-    tech: ["javascript", "reactjs", "jquery"],
+    description: [
+      "Developed a total of 5 features specific to JEC's internal website and HIS (Hospital Information System), such as Dashboard, Patient Management, Appointment, Supply Chain, Finance.",
+      "User guides, tutorials, and FAQs are documented for end users, improving their experience and Ensure smooth orientation.",
+    ],
+    tech: ["JavaScript", "React", "Tailwind"],
   },
   {
     position: "Front End Developer",
     at: "Freelance",
     date: "Jun `22 - Jun `23",
     link: "https://swadeli-profile.vercel.app",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptas at sed atque nostrum lorem20 quidem.",
-    tech: ["javascript", "reactjs", "jquery"],
+    description: [
+      "Developed a profile website and dashboard for a client based on a UI design that was already created by a UI/UX designer and approved by the client.",
+    ],
+    tech: ["JavaScript", "Next", "Tailwind"],
   },
 ];
 
-export const tech_data: TechDataInterface[] = [
-  {
-    name: "javascript",
-    icon: "javascript.svg",
-    url: "https://www.javascript.com/",
-  },
-  {
-    name: "reactjs",
-    icon: "react.svg",
-    url: "https://reactjs.org/",
-  },
-];
+export const tech_data: TechData = {
+  backend: [
+    { name: "NodeJs", icon: (className) => <Nodejs className={className} /> },
+    { name: "ExpressJs", icon: (className) => <Express className={className} /> },
+    { name: "NestJs", icon: (className) => <Nestjs className={className} /> },
+    { name: "EJS", icon: (className) => <Ejs className={className} /> },
+    { name: "Prisma", icon: (className) => <Prisma className={className} /> },
+    { name: "Moongose", icon: (className) => <MoongoseIcon className={className} /> },
+    { name: "JSON Web Token", icon: (className) => <Jwt className={className} /> },
+  ],
+  frontend: [
+    { name: "React", icon: (className) => <Reactjs className={className} /> },
+    { name: "React Native", icon: (className) => <ReactNative className={className} /> },
+    { name: "NextJs", icon: (className) => <Nextjs className={className} /> },
+    { name: "Redux", icon: (className) => <Redux className={className} /> },
+    { name: "Vue", icon: (className) => <Vue className={className} /> },
+    { name: "Tailwind", icon: (className) => <Tailwind className={className} /> },
+    { name: "Bootstrap", icon: (className) => <Bootstrap className={className} /> },
+  ],
+  extra: [
+    { name: "JavaScript", icon: (className) => <Javascript className={className} /> },
+    { name: "TypeScript", icon: (className) => <Typescript className={className} /> },
+    { name: "PostgreSQL", icon: (className) => <Postgresql className={className} /> },
+    { name: "MongoDB", icon: (className) => <Mongodb className={className} /> },
+    { name: "GraphQl", icon: (className) => <Graphql className={className} /> },
+    { name: "Docker", icon: (className) => <Docker className={className} /> },
+    { name: "Redis", icon: (className) => <Redis className={className} /> },
+  ],
+};
 
 export const education_data: EducationDataInterface[] = [
   {
-    logo: "hacktivsvg.svg",
     name: "Hacktiv8 Indonesia",
-    date: "Jan `22 - Apr `22",
-    achievement: "Graduated with a score of 95.5 /100",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate impedit quia necessitatibus corporis qui saepe magnam, mollitia at voluptatum eum, ullam aliquam esse? Quas expedita ipsum eaque nisi neque at.",
+    subTitle: "Fullstack JavaScript Immersive",
+    imgUrl:
+      "https://pbs.twimg.com/profile_images/1303645505465974785/BAedfmOT_400x400.jpg",
+    url: "https://www.hacktiv8.com/",
+    date: "Jan 2022 - Apr 2022",
+    desc: `Predicate : 95.5/100 (Teachers Awards) \n During the 4-month program, I gained valuable expertise in various aspects of JavaScript development, including Interaction workflow, API consumption, and deployment. Learning these technologies: React.js, Redux, Apollo Client, Tailwind CSS, Vue.js, jQuery, Node.js, Express.js, and PostgreSQL, GraphQL, Redis, Firebase, and MongoDB.`,
   },
 ];
 
