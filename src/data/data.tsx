@@ -101,7 +101,7 @@ export const experience_data: ExperienceDataInterface[] = [
   {
     position: "Software Engineer",
     at: "Jakarta Eye Center",
-    date: "Jun `22 - Jun `23",
+    date: "Jun ` 22 - Jun ` 23",
     link: "https://jec.co.id/id",
     description: [
       "Developed a total of 5 features specific to JEC's internal website and HIS (Hospital Information System), such as Dashboard, Patient Management, Appointment, Supply Chain, Finance.",
@@ -112,7 +112,7 @@ export const experience_data: ExperienceDataInterface[] = [
   {
     position: "Front End Developer",
     at: "Freelance",
-    date: "Jun `22 - Jun `23",
+    date: "Jun ` 22 - Jun ` 23",
     link: "https://swadeli-profile.vercel.app",
     description: [
       "Developed a profile website and dashboard for a client based on a UI design that was already created by a UI/UX designer and approved by the client.",
@@ -165,23 +165,14 @@ export const education_data: EducationDataInterface[] = [
 
 export const project_data: ProjectDataInterface[] = [
   {
-    img: "projects.png",
+    img: "/ss2.png",
     title: "Portfolio Website",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ab eligendi iure esse doloremque cupiditate!",
-    tech: [
-      "javascript",
-      "reactjs",
-      "nextjs",
-      "nextjs",
-      "nextjs",
-      "nextjs",
-      "nextjs",
-      "nextjs",
-    ],
+    tech: ["JavaScript", "ReactJs", "NextJs", "Tailwind"],
     url: "https://github.com/renesdwir",
   },
   {
-    img: "projects.png",
+    img: "/ss3.png",
     title: "Portfolio Website",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ab eligendi iure esse doloremque cupiditate!",
     tech: [
