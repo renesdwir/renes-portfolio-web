@@ -13,7 +13,13 @@ const Education = () => {
         {datas.map((data) => (
           <div className="flex flex-row items-start gap-4">
             <div>
-              <Image src={data.imgUrl} alt="Hacktiv8 Indonesia" width={70} height={70} />
+              <Image
+                className="rounded"
+                src={data.imgUrl}
+                alt="Hacktiv8 Indonesia"
+                width={70}
+                height={70}
+              />
             </div>
             <div className="flex-1">
               <Link href={data.url} className="font-bold text-cstmgreen">

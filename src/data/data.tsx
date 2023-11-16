@@ -172,7 +172,7 @@ export const project_data: ProjectDataInterface[] = [
     url: "https://github.com/renesdwir",
   },
   {
-    img: "/ss3.png",
+    img: "/ss2.png",
     title: "Portfolio Website",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ab eligendi iure esse doloremque cupiditate!",
     tech: [
