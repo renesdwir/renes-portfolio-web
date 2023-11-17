@@ -10,8 +10,10 @@ const Profile = () => {
     <div className="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:py-24">
       <h1 className="inline-block font-extrabold text-4xl md:text-4xl lg:text-5xl tracking-tighter selection:bg-cstmgreen selection:text-cstmblack">
         <span>
-          {name.map((item) => (
-            <span className="hover:text-cstmgreen">{item}</span>
+          {name.map((item, idx) => (
+            <span className="hover:text-cstmgreen" key={idx}>
+              {item}
+            </span>
           ))}
           <span className="text-cstmgreen">.</span>
         </span>
@@ -29,7 +31,7 @@ const Profile = () => {
       </div>
       <div className="flex flex-row gap-5 mt-8">
         {contacts.map((contact, idx) => (
-          <Link href={contact.url} rel="noopener noreferrer" target="_blank">
+          <Link key={idx} href={contact.url} rel="noopener noreferrer" target="_blank">
             {contact.icon(
               "h-9 w-9 bg-transparent fill-slate-200  hover:fill-cstmgreen cursor-pointer"
             )}

@@ -10,7 +10,10 @@ const Experience = () => {
       <Title text="Experience" />
       <div className="flex flex-col ">
         {datas.map(({ at, date, description, link, position, tech }, idx) => (
-          <div className="-mx-4 group p-4 pb-6 flex flex-col gap-4 hover:bg-gray-400 rounded-md bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-opacity-10 transition duration-200 ease-in-out">
+          <div
+            key={idx}
+            className="-mx-4 group p-4 pb-6 flex flex-col gap-4 hover:bg-gray-400 rounded-md bg-clip-padding hover:backdrop-filter hover:backdrop-blur-sm hover:bg-opacity-10 transition duration-200 ease-in-out"
+          >
             <div className="">
               <Link href={link} className="text-lg font-semibold cursor-pointer">
                 <span className="group-hover:text-cstmgreen text-cstmgreen lg:text-slate-200">
@@ -21,13 +24,13 @@ const Experience = () => {
               <p className="text-xs">{date}</p>
             </div>
             <div className="text-sm flex flex-col gap-2">
-              {description.map((desc) => (
-                <span>{desc}</span>
+              {description.map((desc, idx) => (
+                <span key={idx}>{desc}</span>
               ))}
             </div>
             <div className="flex flex-wrap flex-row gap-2">
-              {tech.map((item) => (
-                <TechIcon name={item} />
+              {tech.map((item, idx) => (
+                <TechIcon key={idx} name={item} />
               ))}
             </div>
           </div>

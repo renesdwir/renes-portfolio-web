@@ -20,6 +20,7 @@ const Project = () => {
                 alt={title + " Photo"}
                 src={img}
                 fill={true}
+                sizes="(max-width:768px) 100vw, 700px"
                 className="object-cover rounded text-xs"
               />
             </div>
@@ -38,39 +39,6 @@ const Project = () => {
               </div>
             </div>
           </div>
-          // <Link
-          //   key={idx}
-          //   href={url}
-          //   rel="noopener noreferrer"
-          //   target="_blank"
-          //   className=" flex flex-col-reverse md:flex-row p-3 rounded group cursor-pointer  border border-cstmgreen"
-          // >
-          //   <div className="flex-1 mt-3 md:mt-0">
-          //     <p className=" relative inline-block font-semibold text-lg">
-          //       <span className="font-light">2023 |</span>{" "}
-          //       <span className="text-cstmgreen">{title}</span>
-          //       <BiArrowBack className="text-slate-200 absolute -right-5 top-2.5 rotate-[135deg] group-hover:translate-x-2 group-hover:-translate-y-2 ease-in duration-100 text-sm" />
-          //     </p>
-          //     <p className="my-2">{desc}</p>
-          //     <div className="flex flex-wrap flex-row gap-2">
-          //       {tech.map((name, idx) => (
-          //         <TechIcon name={name} key={idx} />
-          //       ))}
-          //     </div>
-          //   </div>
-          //   <div className=" flex items-center">
-          //     <div className="p-7 bg-slate-200 rounded-lg">
-          //       <Image
-          //         src={`/icons/${img}`}
-          //         alt="projects"
-          //         width={0}
-          //         height={0}
-          //         sizes="100vw"
-          //         className="w-20 h-20 inline-block"
-          //       />
-          //     </div>
-          //   </div>
-          // </Link>
         ))}
       </div>
     </div>

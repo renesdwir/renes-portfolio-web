@@ -10,8 +10,8 @@ const Education = () => {
     <div id="education" className="pt-16 mb-16 lg:pt-0 lg:mb-36">
       <Title text="Education" />
       <div className="flex flex-col">
-        {datas.map((data) => (
-          <div className="flex flex-row items-start gap-4">
+        {datas.map((data, idx) => (
+          <div key={idx} className="flex flex-row items-start gap-4">
             <div>
               <Image
                 className="rounded"
