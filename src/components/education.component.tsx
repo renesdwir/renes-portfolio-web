@@ -27,10 +27,7 @@ const Education = () => {
               </Link>
               <p className="text-sm">{data.subTitle}</p>
               <p className="text-sm opacity-70">{data.date}</p>
-              <p
-                className="text-sm whitespace-pre-line mt-1"
-                dangerouslySetInnerHTML={{ __html: data.desc }}
-              ></p>
+              <p className="text-sm whitespace-pre-line mt-1 font-light">{data.desc}</p>
             </div>
           </div>
         ))}

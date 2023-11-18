@@ -1,12 +1,11 @@
 const Footer = () => (
-  <div>
+  <div className="text-center lg:text-left">
     <p className="text-xs">
-      <span className="text-cstmgreen">Thank you</span> very much for visiting
-      my very simple portfolio website.
+      <span className="text-cstmgreen">Thank you</span> very much for visiting my very
+      simple portfolio website.
     </p>
     <p className="text-xs">
-      I hope we can{" "}
-      <span className="text-cstmgreen">work together in the future.</span>
+      I hope we can <span className="text-cstmgreen">work together in the future.</span>
     </p>
   </div>
 );

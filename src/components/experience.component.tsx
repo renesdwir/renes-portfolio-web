@@ -25,7 +25,9 @@ const Experience = () => {
             </div>
             <div className="text-sm flex flex-col gap-2">
               {description.map((desc, idx) => (
-                <span key={idx}>{desc}</span>
+                <span className="font-light" key={idx}>
+                  {desc}
+                </span>
               ))}
             </div>
             <div className="flex flex-wrap flex-row gap-2">
