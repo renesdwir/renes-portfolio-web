@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["pbs.twimg.com"],
+    dangerouslyAllowSVG: true,
+    domains: ["pbs.twimg.com", "streak-stats.demolab.com"],
   },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
