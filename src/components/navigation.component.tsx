@@ -1,15 +1,13 @@
-import useHash from "@/hooks/useHash";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+const getHash = () =>
+  typeof window !== "undefined" ? decodeURIComponent(window.location.hash) : undefined;
 const Nav = ({ to }: { to: string }) => {
-  const [location, setLocation] = useState("");
-  const hash = useHash();
-  // console.log(hash);
-  console.log(location, "location");
-  useEffect(() => {
-    setLocation(window.location.hash);
-    // console.log("Hash:", window.location.hash);
-  }, []);
+  const [location, setLocation] = useState(getHash());
+  console.log(location);
+  const handleChangeLocation = () => {
+    setLocation(getHash());
+  };
   // const NavItem = [
   //   {
   //     name: "About",
@@ -37,6 +35,7 @@ const Nav = ({ to }: { to: string }) => {
     <Link
       href={`/#${to}`}
       className=" ease-in-out transition-all cursor-pointer capitalize"
+      onClick={handleChangeLocation}
     >
       <span className="wrapper relative  transition-all ease-out  duration-500">
         <span className="text capitalize  absolute w-0 left-0 h-full inline-block  transition-all ease-out  duration-300 bg-cstmgreen -z-10"></span>
