@@ -5,6 +5,11 @@
 
 /* .active-link {
 } */
+
+*,
+html {
+  scroll-behavior: smooth !important;
+}
 .active-link .wrapper {
   padding-left: 40px;
   padding-right: 20px;
