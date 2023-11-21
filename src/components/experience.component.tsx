@@ -6,7 +6,7 @@ import { experience_data } from "@/data/data";
 const Experience = () => {
   const datas = experience_data;
   return (
-    <div id="experience" className="pt-16 mb-16 lg:pt-0 lg:mb-36 ">
+    <section id="experience" className="pt-16 mb-16 lg:pt-0 lg:mb-36 ">
       <Title text="Experience" />
       <div className="flex flex-col ">
         {datas.map(({ at, date, description, link, position, tech }, idx) => (
@@ -38,7 +38,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
