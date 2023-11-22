@@ -6,33 +6,6 @@ interface NavProps {
   isActive: boolean;
 }
 const Nav = (props: NavProps) => {
-  // useEffect(() => {
-  //   const hash = getHash();
-  //   setLocation(hash !== undefined ? hash : "");
-  // }, []);
-  // const NavItem = [
-  //   {
-  //     name: "About",
-  //     path: `/#about`,
-  //     current: router.pathname === "#about",
-  //   },
-  //   {
-  //     name: "Experience",
-  //     path: `/#experience`,
-  //     current: router.pathname === "/#experience",
-  //   },
-  //   {
-  //     name: "Skills",
-  //     path: `/#skills`,
-  //     current: router.pathname === "/#skills",
-  //   },
-  // ];
-  // useEffect(() => {
-  //   // NavItem.forEach((nav) => {
-  //   //   nav.current = nav.path === router.pathname;
-  //   // });
-  //   console.log(router);
-  // }, [router.pathname]);
   return (
     <Link
       onClick={props.handleClick}
