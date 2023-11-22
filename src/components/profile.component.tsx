@@ -3,20 +3,19 @@ import Nav from "./navigation.component";
 import Link from "next/link";
 import { profile_data, navigation_data, name } from "@/data/data";
 const getHash = () =>
-  typeof window !== "undefined" ? decodeURIComponent(window.location.hash) : "";
+  typeof window !== undefined ? decodeURIComponent(window.location.hash) : "";
 
 const Profile = () => {
   const { position, profileDescription } = profile_data;
   const { contacts, nav } = navigation_data;
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("#about");
   const handleClick = (loc: string) => {
     setLocation(`#${loc}`);
   };
   useEffect(() => {
     const hash = getHash();
-    setLocation(hash !== undefined ? hash : "");
+    setLocation(hash !== "" ? hash : "#about");
   }, []);
-  console.log(location);
   return (
     <div className="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:py-24">
       <h1 className="inline-block font-extrabold text-4xl md:text-4xl lg:text-5xl tracking-tighter selection:bg-cstmgreen selection:text-cstmblack">
