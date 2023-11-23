@@ -7,7 +7,7 @@ import Link from "next/link";
 const Education = () => {
   const datas = education_data;
   return (
-    <div id="education" className="pt-16 mb-16 lg:pt-0 lg:mb-36">
+    <div id="education" className="pt-16 mb-16 lg:pt-24 ">
       <Title text="Education" />
       <div className="flex flex-col">
         {datas.map((data, idx) => (
