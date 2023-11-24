@@ -22,7 +22,7 @@ import {
 const Tech = () => {
   const datas = tech_data;
   return (
-    <section id="skills" className="pt-16 mb-16 lg:pt-0 lg:mb-36">
+    <section id="skills" className="pt-16 mb-16  lg:pt-24">
       <Title text="Some Technologies I've worked with" />
       <div className="flex flex-col gap-8">
         <div>
