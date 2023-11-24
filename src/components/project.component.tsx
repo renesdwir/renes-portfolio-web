@@ -8,7 +8,7 @@ import Link from "next/link";
 const Project = () => {
   const datas = project_data;
   return (
-    <div id="projects" className="pt-16 mb-16 lg:pt-0 lg:mb-36">
+    <div id="projects" className="pt-16 mb-16 lg:pt-24 lg:mb-36">
       <Title text="Projects" />
       <div className="flex flex-col  text-slate-200">
         {datas.map(({ desc, img, tech, title, url }, idx) => (
