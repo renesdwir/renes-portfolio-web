@@ -1,24 +1,6 @@
-import { TechDataInterface } from "@/data/data-types";
-import Image from "next/image";
-import Link from "next/link";
 import Title from "./title.component";
 
 import { tech_data } from "@/data/data";
-import {
-  Express,
-  Graphql,
-  Javascript,
-  Jwt,
-  Mongodb,
-  Mongoose,
-  Nextjs,
-  Postgresql,
-  Prisma,
-  Reactjs,
-  Redux,
-  Tailwind,
-  Vue,
-} from "./icons/Icons";
 const Tech = () => {
   const datas = tech_data;
   return (

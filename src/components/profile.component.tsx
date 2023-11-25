@@ -2,20 +2,37 @@ import React, { useEffect, useState } from "react";
 import Nav from "./navigation.component";
 import Link from "next/link";
 import { profile_data, navigation_data, name } from "@/data/data";
-const getHash = () =>
-  typeof window !== undefined ? decodeURIComponent(window.location.hash) : "";
 
 const Profile = () => {
   const { position, profileDescription } = profile_data;
   const { contacts, nav } = navigation_data;
-  const [location, setLocation] = useState("#about");
-  const handleClick = (loc: string) => {
-    setLocation(`#${loc}`);
-  };
+  const [location, setLocation] = useState("");
   useEffect(() => {
-    const hash = getHash();
-    setLocation(hash !== "" ? hash : "#about");
-  }, []);
+    const handleScroll = () => {
+      // Mendapatkan posisi scroll vertikal
+      const scrollPosition = window.scrollY;
+      // Mendapatkan semua elemen section di halaman
+      const sections = document.querySelectorAll("section");
+      // Iterasi melalui setiap elemen section dan memeriksa posisi scroll
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        // Memeriksa apakah posisi scroll berada di dalam batas section tertentu
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          // Mengatur ID section saat ini
+          setLocation("#" + section.id);
+        }
+      });
+    };
+    handleScroll();
+    // Menambahkan event listener untuk memantau perubahan scroll
+    window.addEventListener("scroll", handleScroll);
+    // Membersihkan event listener pada unmount komponen
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // useEffect hanya dijalankan sekali pada mount komponen
+
   return (
     <div className="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:py-24">
       <h1 className="inline-block font-extrabold text-4xl md:text-4xl lg:text-5xl tracking-tighter selection:bg-cstmgreen selection:text-cstmblack">
@@ -36,12 +53,7 @@ const Profile = () => {
       </div>
       <div className="flex-col my-6 hidden lg:flex gap-2">
         {nav.map((text, idx) => (
-          <Nav
-            to={text}
-            key={idx}
-            handleClick={() => handleClick(text)}
-            isActive={location === `#${text}`}
-          />
+          <Nav to={text} key={idx} isActive={location === `#${text}`} />
         ))}
       </div>
       <div className="flex flex-row gap-5 mt-8">
