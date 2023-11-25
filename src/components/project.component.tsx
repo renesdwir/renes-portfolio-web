@@ -8,7 +8,7 @@ import Link from "next/link";
 const Project = () => {
   const datas = project_data;
   return (
-    <div id="projects" className="pt-16 mb-16 lg:pt-24 lg:mb-36">
+    <section id="projects" className="pt-16 mb-16 lg:pt-24 lg:mb-36">
       <Title text="Projects" />
       <div className="flex flex-col  text-slate-200">
         {datas.map(({ desc, img, tech, title, url }, idx) => (
@@ -57,6 +57,7 @@ const Project = () => {
             alt="streak graph"
             fill={true}
             className="object-contain"
+            sizes="(max-width:768px) 100vw, 700px"
           />
         </div>
         <Link
@@ -68,7 +69,7 @@ const Project = () => {
           <BiArrowBack className="group:text-cstmgreen absolute -right-[17px] top-1 rotate-[180deg] group-hover:translate-x-1  ease-in duration-100 text-sm" />
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

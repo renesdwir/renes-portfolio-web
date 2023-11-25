@@ -7,7 +7,7 @@ import Link from "next/link";
 const Education = () => {
   const datas = education_data;
   return (
-    <div id="education" className="pt-16 mb-16 lg:pt-24 ">
+    <section id="education" className="pt-16 mb-16 lg:pt-24 ">
       <Title text="Education" />
       <div className="flex flex-col">
         {datas.map((data, idx) => (
@@ -32,7 +32,7 @@ const Education = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
