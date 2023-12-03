@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import Nav from "./navigation.component";
 import Link from "next/link";
